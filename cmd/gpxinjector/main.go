@@ -107,7 +107,7 @@ func buildCombinedGPX(gpxTree gpx, measures []monitor.Measure) (gpx, error) {
 				Longitude: point.Longitude,
 				Timestamp: point.Timestamp,
 				Elevation: point.Elevation,
-				Name:      fmt.Sprintf("%v - %v", measures[match].Frequency/1000, measures[match].RfLevel),
+				Name:      fmt.Sprintf("%v - %v", measures[match].Frequency/1000, measures[match].RfLevel/10),
 			})
 	}
 	return ret, nil
