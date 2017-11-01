@@ -67,7 +67,7 @@ func (oh *OutputHandler) ConsolidateOutputs() {
 func (oh *OutputHandler) AddMeasure(m monitor.Measure) {
 	oh.measures = append(oh.measures, m)
 	oh.c++
-	if oh.c%10 == 0 {
+	if oh.c%100 == 0 {
 		oh.FlushMeasures()
 	}
 }
