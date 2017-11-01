@@ -127,7 +127,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("invalid db44monitor file: %v", err)
 	}
-
+	sort.Sort(monitor.ByTimestamp(db44Data))
 	combinedGPX, err := buildCombinedGPX(gpxData, db44Data)
 	if err != nil {
 		log.Fatalf("unable to build gpx with db44 data embedded: %v", err)
